@@ -11,6 +11,13 @@ class SearchContainer extends Component {
       query: ""
     }
     this.onSubmitQuery = this.onSubmitQuery.bind(this)
+    this.handleSearchInput = this.handleSearchInput.bind(this)
+  }
+
+  handleSearchInput(e) {
+    this.setState({
+      query: e.target.value
+    })
   }
 
   onSubmitQuery(e) {
@@ -23,7 +30,11 @@ class SearchContainer extends Component {
   render() {
     const toRender = this.state.hasSearched
       ? <Results shows={this.state.shows} />
-      : <Search query={this.state.query} onSubmitQuery={this.onSubmitQuery} />
+      : <Search
+          query={this.state.query}
+          handleSearchInput={this.handleSearchInput}
+          onSubmitQuery={this.onSubmitQuery}
+        />
     return <div>{toRender}</div>
   }
 }
