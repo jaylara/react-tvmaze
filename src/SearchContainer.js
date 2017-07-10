@@ -14,7 +14,7 @@ class SearchContainer extends Component {
   render() {
     const toRender = this.state.hasSearched
       ? <Results shows={this.state.shows} />
-      : <Search />
+      : <Search query={this.state.query} />
     return <div>{toRender}</div>
   }
 }
