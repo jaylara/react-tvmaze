@@ -3,7 +3,7 @@ import React, { Component } from "react"
 class Search extends Component {
   render() {
     return (
-      <form>
+      <form onSubmit={this.props.onSubmitQuery}>
         <input type="text" placeholder="Enter search term" />
         <button type="submit">Submit</button>
       </form>
