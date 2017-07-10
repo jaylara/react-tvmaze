@@ -58,7 +58,7 @@ const results = [
 ]
 
 ReactDOM.render(
-  <Home shows={results} hasSearched={true} />,
+  <Home shows={results} hasSearched={false} />,
   document.getElementById("root")
 )
 registerServiceWorker()

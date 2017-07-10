@@ -9,7 +9,7 @@ class Home extends Component {
       ? <Results shows={this.props.shows} />
       : <Search />
     return (
-      <div>
+      <div className="Home">
         <h1>React TVMaze</h1>
         {toRender}
       </div>
